@@ -10,26 +10,22 @@
     <title>Country Demography</title>
 </head>
 <body>
-    <main class="d-flex justify-content-between border1 p-4">
+    <main class="d-flex justify-content-between border1 p-4" id="main">
         <h4 class="text-center">Where in the world?</h4>
-        <p><i class="fa-solid fa-moon"></i> Dark Mode</p>
+        <p id="switch-background"><i class="fa-solid fa-moon"></i>Dark Mode</p>
     </main>
     <section class="d-flex justify-content-between  p-5">
-        <div class="input-group search w-auto">
-            <span class="input-group-text">
-                <span class="fa-solid fa-magnifying-glass"></span>
-            </span>
-            <input type="text" id="search-bar" class="input-group-text"  placeholder="search for a country....">  
-        </div>
-        <div id="select" class="w-auto">
-            <select name="" id="">
-                <option value="">Filter by Region</option>
-                <option value="Africa">Africa</option>
-                <option value="America">America</option>
-                <option value="Asia">Asia</option>
-                <option value="">Oceania</option>
-            </select>
-        </div>
+        <form class="w-25">
+            <input type="text" id="search-bar" class="form-control me-sm-2" placeholder="search for a country....">
+        </form>
+        <select class="form-select form-select-sm w-25" aria-label=".form-select-sm example" id="selected-region">
+            <option selected>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
     </section>
     <section class="mx-5 pt-4">
         <div class="d-flex flex-wrap mx-2 contry-holder" id="country-card">
