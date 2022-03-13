@@ -1,4 +1,16 @@
+body{
+    background: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+}
+.border1{
+    background: hsl(209, 23%, 22%);
+}
 .card-img{
     height: 180px;
     width: auto;
+}
+.country-details-img {
+    height: 400px;
+    margin-left: 2em;
+    margin-right: 4em;
 }
