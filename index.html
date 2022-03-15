@@ -10,34 +10,102 @@
     <title>Country Demography</title>
 </head>
 <body>
-    <main class="d-flex justify-content-between border1 p-4" id="main">
+    <main class="d-flex justify-content-between border1 p-5" id="main">
         <h4 class="text-center">Where in the world?</h4>
         <p id="switch-background"><i class="fa-solid fa-moon"></i>Dark Mode</p>
     </main>
     <section class="d-flex justify-content-between  p-5">
         <form class="w-25">
-            <input type="text" id="search-bar" class="form-control me-sm-2" placeholder="search for a country....">
+            <input type="text" id="search-bar" class="form-control me-sm-2 search" placeholder="search for a country....">
         </form>
-        <select class="form-select form-select-sm w-25" aria-label=".form-select-sm example" id="selected-region">
+       <div class="dropDownCon" id="selected-region">
+            <div class="dropDown">
+                <p>Filter by Region</p>
+                <button><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="drop showDropDown" id="drop">
+                <p class="region">All</p>
+                <p class="region">Africa</p>
+                <p class="region">America</p>
+                <p class="region">Asia</p>
+                <p class="region">Europe</p>
+                <p class="region">Oceania</p>
+            </div>
+       </div>
+        <!-- <select class="form-select dropDown form-select-sm w-25" aria-label=".form-select-sm example" id="selected-region">
             <option selected>Filter by Region</option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+            <div id="drop">
+                <option class="region">Africa</option>
+                <option class="region">America</option>
+                <option class="region">Asia</option>
+                <option class="region">Europe</option>
+                <option class="region">Oceania</option>
+            </div> -->
+            <!-- <div id="drop">
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </div> -->
+        </select>
     </section>
-    <section class="mx-5 pt-4">
+   
+    <!-- All Country cards are dispalyed here -->
+    <!-- <section class="mx-5 pt-4">
         <div class="d-flex flex-wrap mx-2 contry-holder" id="country-card">
-            
+        </div>
+    </section> -->
+
+    <div class="pickCountries d-flex flex-wrap p-5">
+        <div class="countryHolder">
+
+        </div>
+    </div>
+
+    <section class="countryModal show">
+        <div class="p-5">
+            <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
+        </div>
+        <div class="p-4 d-flex align-items-center justify-content-evenly">
+            <div>
+                <img src="https://flagcdn.com/ao.svg" alt="country-flag" class="country-details-img">
+            </div>
+            <div class="" id="country-description">
+                <h2 class="fw-bold">Belgium</h2>
+                <div class="d-flex pt-5">
+                    <div>
+                        <h6><strong>Native Name:</strong> Belgie</h6>
+                        <h6><strong>Population:</strong> 11,319,511</h6>
+                        <h6><strong>Region:</strong> Europe</h6>
+                        <h6><strong>Sub Region:</strong> Western Europe</h6>
+                        <h6><strong>Capital:</strong> Brussels</h6>
+                    </div>
+                    <div class="mx-5">
+                        <h6><strong>Top Level Domain:</strong> .be</h6>
+                        <h6><strong>Currencies:</strong> Euro</h6>
+                        <h6><strong>Languages:</strong> Dutch, French, German</h6>
+                    </div>
+                </div>
+               
+                <div class="d-flex">
+                    <h3 class="me-3"><strong>Border Countries:</strong></h3>
+                    <button id="back"  class="btn me-3">France</button>
+                    <button id="back" class="btn  me-3">Germany</button>
+                    <button id="back" class="btn me-3">Netherlamds</button>
+                </div>
+            </div>
         </div>
     </section>
+
+
+   
     
-        
                 
 
 
-    <script src="./countryApp.js"></script>
-    
+    <script src="./testCountry.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="./countryApp.js"></script> -->
 </body>
 </html>

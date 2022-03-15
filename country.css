@@ -1,17 +1,76 @@
-body{
-    background: hsl(0, 0%, 98%);
-    color: hsl(200, 15%, 8%);
+:root {
+    --primary-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --element-light: hsl(0, 0%, 100%);  
+}
+.dark-mode {
+    --primary-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --element-light: hsl(209, 23%, 22%);
+}
+body {
+    background: var(--primary-color);
 }
 .border1{
-    background: hsl(0, 0%, 98%);
+    background: var(--element-light);
+    color: var(--text-color);
+}
+#search-bar {
+    background: var(--element-light);
+    color: var(--text-color);
+}
+#selected-region {
+    background: var(--element-light);
+    color: var(--text-color);
+}
+#country-choice{
+    background: var(--element-light);
+    color: var(--text-color);
 }
 
-.card-img{
+/* #cardImg {
     height: 180px;
     width: auto;
+    object-fit: cover;
+} */
+
+
+/* Second Page */
+#back {
+    background: var(--element-light);
+    color: var(--text-color);
+    border: 1px solid hsl(209, 23%, 22%);
+}
+#country-description{
+    color: var(--text-color);
+}
+.dropDown{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(82, 77, 77);
+    width: 300px;
+    padding: 10px 15px;
+}
+button {
+    border: 0;
+    background: transparent;
+}
+.showDropDown {
+    display: none;
+    position: relative;
+}
+.countryModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    background: inherit;
 }
 .country-details-img {
-    height: 400px;
-    margin-left: 2em;
-    margin-right: 4em;
+    height: auto;
+}
+.show {
+    display: none;
 }
