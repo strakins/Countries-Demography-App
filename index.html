@@ -18,23 +18,25 @@
         <form class="w-25">
             <input type="text" id="search-bar" class="form-control me-sm-2 search" placeholder="search for a country....">
         </form>
-       <div class="dropDownCon" id="selected-region">
-            <div class="dropDown">
-                <p>Filter by Region</p>
+       <div class="dropDownCon" id="selected-region"> 
+        <!-- Plain Css Filter -->
+            <div class="dropDown d-flex justify-content-between border border-5 p-2 rounded mb-1">
+                <p class="pt-2">Filter by Region</p>
                 <button><i class="fas fa-chevron-down"></i></button>
             </div>
-            <div class="drop showDropDown" id="drop">
-                <p class="region">All</p>
-                <p class="region">Africa</p>
-                <p class="region">America</p>
-                <p class="region">Asia</p>
-                <p class="region">Europe</p>
-                <p class="region">Oceania</p>
+            <div class="drop showDropDown pt-1 border rounded" id="drop">
+                <p class="region mx-4">All</p>
+                <p class="region mx-4">Africa</p>
+                <p class="region mx-4">America</p>
+                <p class="region mx-4">Asia</p>
+                <p class="region mx-4">Europe</p>
+                <p class="region mx-4">Oceania</p>
             </div>
        </div>
-        <!-- <select class="form-select dropDown form-select-sm w-25" aria-label=".form-select-sm example" id="selected-region">
+        <!-- <select class="form-select drop showDropDown form-select-sm w-25" aria-label=".form-select-sm example" id="drop">
             <option selected>Filter by Region</option>
             <div id="drop">
+                <option class="region">All</option>
                 <option class="region">Africa</option>
                 <option class="region">America</option>
                 <option class="region">Asia</option>
@@ -64,7 +66,7 @@
     </div>
 
     <section class="countryModal show">
-        <div class="p-5">
+        <!-- <div class="p-5">
             <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
         </div>
         <div class="p-4 d-flex align-items-center justify-content-evenly">
@@ -88,20 +90,16 @@
                     </div>
                 </div>
                
-                <div class="d-flex">
-                    <h3 class="me-3"><strong>Border Countries:</strong></h3>
+                <div class="d-flex py-3">
+                    <h5 class="me-3 pt-2"><strong>Border Countries:</strong></h5>
                     <button id="back"  class="btn me-3">France</button>
                     <button id="back" class="btn  me-3">Germany</button>
                     <button id="back" class="btn me-3">Netherlamds</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
-
-
-   
-    
-                
+          
 
 
     <script src="./testCountry.js"></script>

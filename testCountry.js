@@ -15,7 +15,7 @@ async function allCountries() {
     console.log(res)
     res.forEach (element => {
         displayCountry(element)
-    })
+    });
 }
 allCountries()
 
@@ -36,6 +36,10 @@ function displayCountry(data) {
     `
 
     countryElement.appendChild(countryHolder)
+    countryHolder.addEventListener("click", () => {
+        showCountryDetails(data)
+        console.log(showCountryDetails(data))
+    })
 }
 
 
@@ -90,12 +94,46 @@ colorSwitch.onclick = () => {
 };
 
 
-const back = document.getElementById("back")
-const hidemodal = document.querySelector(".countryModal")
-back.addEventListener("click", () => {
-    hidemodal.classList.toggle(show)
-})
-
+const showModal = document.querySelector(".countryModal")
+function showCountryDetails(data) {
+    showModal.classList.toggle("show")
+    showModal.innerHTML = `
+    
+        <div class="p-5">
+            <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
+        </div>
+        <div class="p-4 d-flex align-items-center justify-content-evenly">
+            <div>
+                <img src="${data.flag}" alt="country-flag" class="country-details-img">
+            </div>
+            <div class="" id="country-description">
+                <h2 class="fw-bold">${data.name}</h2>
+                <div class="d-flex pt-5">
+                    <div>
+                        <h6><strong>Native Name:</strong> ${data.nativeName}</h6>
+                        <h6><strong>Population:</strong> ${data.population.toLocaleString("en-US")}</h6>
+                        <h6><strong>Region:</strong> ${data.region}</h6>
+                        <h6><strong>Sub Region:</strong> ${data.subregion}</h6>
+                        <h6><strong>Capital:</strong> ${data.capital}</h6>
+                    </div>
+                    <div class="mx-5">
+                        <h6><strong>Top Level Domain: </strong>${data.topLevelDomain}</h6>
+                        <h6><strong>Currencies: </strong>${data.currencies.map(elem => elem.symbol)}</h6>
+                        <h6><strong>Languages:</strong> ${data.languages.map(elem => elem.name)}</h6>
+                    </div>
+                </div>
+                <div class="d-flex py-3">
+                    <h5 class="me-3 pt-2"><strong>Border Countries:</strong></h5>
+                    <button id="back"  class="btn me-3">${data.borders}</button>
+                </div>
+            </div>
+        </div>
+    `
+    // const back = document.querySelector(".back")
+    back.addEventListener("click", () => {
+        showModal.classList.toggle("show")
+    })
+}
 // search.addEventListener("input", () => {
 //     console.log(search.value)
 // })
