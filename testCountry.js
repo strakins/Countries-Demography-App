@@ -102,7 +102,7 @@ function showCountryDetails(data) {
         <div class="p-5">
             <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
         </div>
-        <div class="p-4 d-flex align-items-center justify-content-evenly">
+        <div class="p-4 content-details align-items-center justify-content-evenly">
             <div>
                 <img src="${data.flag}" alt="country-flag" class="country-details-img">
             </div>
