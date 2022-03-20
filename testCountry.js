@@ -107,7 +107,7 @@ function showCountryDetails(data) {
             </div>
             <div class="" id="country-description">
                 <h2 class="fw-bold">${data.name}</h2>
-                <div class="d-flex pt-3">
+                <div class="mx-2 details pt-3">
                     <div>
                         <h6><strong>Native Name:</strong> ${data.nativeName}</h6>
                         <h6><strong>Population:</strong> ${data.population.toLocaleString("en-US")}</h6>
@@ -115,7 +115,7 @@ function showCountryDetails(data) {
                         <h6><strong>Sub Region:</strong> ${data.subregion}</h6>
                         <h6><strong>Capital:</strong> ${data.capital}</h6>
                     </div>
-                    <div class="mx-5">
+                    <div class="mx-md-5">
                         <h6><strong>Top Level Domain: </strong>${data.topLevelDomain}</h6>
                         <h6><strong>Currencies: </strong>${data.currencies.map(elem => elem.symbol)}</h6>
                         <h6><strong>Languages:</strong> ${data.languages.map(elem => elem.name)}</h6>

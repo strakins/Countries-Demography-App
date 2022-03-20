@@ -68,6 +68,7 @@ button {
     height: 100%;
     /* display: block; */
     background: inherit;
+    overflow-y: scroll;
 }
 .country-details-img {
     height: 400px;
@@ -83,6 +84,10 @@ button {
     align-items: center;
     
 }
+.details{
+    display: flex;
+}
+
 
 @media (max-width: 750px) {
     .search-filter{
@@ -97,5 +102,9 @@ button {
     .country-details-img {
         height: 250px;
         width: 300px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
     }
 }
