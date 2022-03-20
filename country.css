@@ -70,8 +70,8 @@ button {
     background: inherit;
 }
 .country-details-img {
-    height: 500px;
-    width: 700px;
+    height: 400px;
+    width: 500px;
 }
 .show {
     display: none;
@@ -95,7 +95,7 @@ button {
         margin-top: -3rem;
     }
     .country-details-img {
-        height: 400px;
-        width: 500px;
+        height: 250px;
+        width: 300px;
     }
 }
