@@ -14,13 +14,14 @@
         <h4 class="text-center">Where in the world?</h4>
         <p id="switch-background"><i class="fa-solid fa-moon"></i>Dark Mode</p>
     </main>
-    <section class="d-flex justify-content-between  p-5">
-        <form class="w-25">
+    <section class="search-filter d-flex justify-content-between  p-5">
+        <form class="w-lg-75 w-sm-100 mb-3">
             <input type="text" id="search-bar" class="form-control me-sm-2 search" placeholder="search for a country....">
         </form>
+        <!-- <div class="col-12 col-md-4"></div> -->
        <div class="dropDownCon" id="selected-region"> 
         <!-- Plain Css Filter -->
-            <div class="dropDown d-flex justify-content-between border border-5 px-2 rounded mb-1">
+            <div class="dropDown d-flex justify-content-between border border-3 px-2 rounded mb-1">
                 <p class="pt-2">Filter by Region</p>
                 <button><i class="fas fa-chevron-down"></i></button>
             </div>
@@ -33,16 +34,6 @@
                 <p class="region mx-4">Oceania</p>
             </div>
        </div>
-        <!-- <select class="form-select drop showDropDown form-select-sm w-25" aria-label=".form-select-sm example" id="drop">
-            <option selected>Filter by Region</option>
-            <div id="drop">
-                <option class="region">All</option>
-                <option class="region">Africa</option>
-                <option class="region">America</option>
-                <option class="region">Asia</option>
-                <option class="region">Europe</option>
-                <option class="region">Oceania</option>
-            </div> -->
             <!-- <div id="drop">
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
@@ -65,10 +56,13 @@
         </div>
     </div>
 
+    <!-- Section Content Created with js -->
     <section class="countryModal show">
-        <!-- <div class="p-5">
+         <div class="p-5">
             <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
         </div>
+        
+<!-- 
         <div class="p-4 d-flex align-items-center justify-content-evenly">
             <div>
                 <img src="https://flagcdn.com/ao.svg" alt="country-flag" class="country-details-img">

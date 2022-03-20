@@ -34,7 +34,6 @@ function displayCountry(data) {
                         </div>
                     </div>
     `
-
     countryElement.appendChild(countryHolder)
     countryHolder.addEventListener("click", () => {
         showCountryDetails(data)
@@ -96,19 +95,19 @@ colorSwitch.onclick = () => {
 
 const showModal = document.querySelector(".countryModal")
 function showCountryDetails(data) {
-    showModal.classList.toggle("show")
+    showModal.classList.remove("show")
     showModal.innerHTML = `
     
         <div class="p-5">
             <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
         </div>
-        <div class="p-4 content-details align-items-center justify-content-evenly">
+        <div class="p-2 content-details">
             <div>
                 <img src="${data.flag}" alt="country-flag" class="country-details-img">
             </div>
             <div class="" id="country-description">
                 <h2 class="fw-bold">${data.name}</h2>
-                <div class="d-flex pt-5">
+                <div class="d-flex pt-3">
                     <div>
                         <h6><strong>Native Name:</strong> ${data.nativeName}</h6>
                         <h6><strong>Population:</strong> ${data.population.toLocaleString("en-US")}</h6>
@@ -122,18 +121,22 @@ function showCountryDetails(data) {
                         <h6><strong>Languages:</strong> ${data.languages.map(elem => elem.name)}</h6>
                     </div>
                 </div>
-                <div class="d-flex py-3">
+                <div class="d-flex py-2">
                     <h5 class="me-3 pt-2"><strong>Border Countries:</strong></h5>
                     <button id="back"  class="btn me-3">${data.borders}</button>
                 </div>
             </div>
         </div>
     `
-    // const back = document.querySelector(".back")
+    const back = document.getElementById("back")
     back.addEventListener("click", () => {
-        showModal.classList.toggle("show")
+        showModal.classList.add("show")
     })
 }
+// const back = document.getElementById("back")
+//     back.addEventListener("click", () => {
+//         showModal.classList.add("show")
+//     })
 // search.addEventListener("input", () => {
 //     console.log(search.value)
 // })
