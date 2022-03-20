@@ -101,13 +101,13 @@ function showCountryDetails(data) {
         <div class="p-5">
             <h5 class="btn" id="back"><i class="fa-solid fa-left-long"></i> Back</h5>
         </div>
-        <div class="p-2 content-details">
+        <div class="p-3 content-details">
             <div>
                 <img src="${data.flag}" alt="country-flag" class="country-details-img">
             </div>
-            <div class="" id="country-description">
+            <div class="mx-5 pt-4" id="country-description">
                 <h2 class="fw-bold">${data.name}</h2>
-                <div class="mx-2 details pt-3">
+                <div class="details pt-3">
                     <div>
                         <h6><strong>Native Name:</strong> ${data.nativeName}</h6>
                         <h6><strong>Population:</strong> ${data.population.toLocaleString("en-US")}</h6>
